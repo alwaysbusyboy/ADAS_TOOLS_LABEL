@@ -27,7 +27,7 @@ for i=1:length(raw_videos)
     fps =  vid.FrameRate;
     quality = 100;
     
-    info = struct('width',width,'height',height,'fps',fps,'quality',quality,'codec','jpg');
+    info = struct('width',width,'height',height,'fps',fps,'quality',quality,'codec','png');
     sw = seqIo(seq_name, 'writer', info );   
     tid = ticStatus('create video sequence usage',.2,1);
     for f=1:10:numFrames %skip every 10 frames.
